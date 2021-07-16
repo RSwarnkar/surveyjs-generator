@@ -1,0 +1,3516 @@
+{
+ title: "DevOps Practices Maturity Assessment",
+ description: "Please follow along this survey. This survey assess your teams current maturity state with regards to DevOps practices",
+ logo: "https://about.twitter.com/content/dam/about-twitter/en/brand-toolkit/brand-download-img-1.jpg.twimg.1920.jpg",
+ logoWidth: "50px",
+ logoHeight: "20px",
+ pages: [
+  {
+   name: "page1",
+   elements: [
+    {
+     type: "text",
+     name: "q_emailid",
+     title: "You Email ID:",
+     description: "yourname@email.com",
+     isRequired: true
+    },
+    {
+     type: "text",
+     name: "q_app_name",
+     title: "Application Name:",
+     isRequired: true
+    },
+    {
+     type: "text",
+     name: "q_tower_name",
+     title: "Tower Name (e.g. CSD, BI, Digital etc.)",
+     isRequired: true
+    },
+    {
+     type: "text",
+     name: "q_surveydate",
+     title: "Survey Date:",
+     description: "Click on picker icon",
+     isRequired: true,
+     inputType: "date"
+    }
+   ],
+   title: "Basic Details",
+   description: "Please provide basic about the application or team being assessed and surveyor (the one who is assessing). "
+  },
+  {
+   name: "page2",
+   elements: [
+    {
+     type: "image",
+     name: "question1",
+     imageLink: "https://api.surveyjs.io/private/Surveys/files?name=c7e3f0ee-60ae-4a8f-81f7-18882079aada",
+     imageHeight: 500,
+     imageWidth: 800
+    }
+   ],
+   title: "Survey Tips and Information",
+   description: "Please go through below points before starting the survey to have a pleasant and engaging experience."
+  },
+  {
+   name: "page01",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q01_automation01",
+     title: "How often are builds made?",
+     description: "Phase:Build, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Builds are not synced with any commits. They are made based out of need only"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Greater than Weekly"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Weekly"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Daily"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Hourly"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: On Demand, any-time"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q01_automation01_comment",
+     visibleIf: "{q01_automation01}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q01_automation01_comment",
+     visibleIf: "{q01_automation01}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q01_automation01}"
+    },
+    {
+     type: "rating",
+     name: "q01_automation01_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q01_automation01_desired_level_comment",
+     title: "Rationale for LEVEL {q01_automation01_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q01_automation01_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page02",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q02_automation02",
+     title: "How do you provision new build, test and prod environments?",
+     description: "Phase:Provisioning, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No clear provisioning process known"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Clear provisioning process known and available for reference for application team"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Manual procedures, takes a long time"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Mostly manual, delivery times often too long"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Mostly code-driven and automated, delivery times fairly acceptable"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Fully code-driven and self-service "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q02_automation02_comment",
+     visibleIf: "{q02_automation02}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q02_automation02_comment",
+     visibleIf: "{q02_automation02}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q02_automation02}"
+    },
+    {
+     type: "rating",
+     name: "q02_automation02_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q02_automation02_desired_level_comment",
+     title: "Rationale for LEVEL {q02_automation02_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q02_automation02_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page03",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q03_automation03",
+     title: "What is the average quality (result) of your current integrations?",
+     description: "Phase:Integration, Business Value:Continuous Security & Code Quality",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No idea about the quality"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Integration Testing is only done when all sources are up and is entirely manual"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Integrations usually generate many issues, not done frequently"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Fair, acceptable amount of quality issues"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: High, Low amount of integration issues due to regular integrations"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Very high. all integration issues are resolved immediately and mostly automatically "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q03_automation03_comment",
+     visibleIf: "{q03_automation03}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q03_automation03_comment",
+     visibleIf: "{q03_automation03}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q03_automation03}"
+    },
+    {
+     type: "rating",
+     name: "q03_automation03_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q03_automation03_desired_level_comment",
+     title: "Rationale for LEVEL {q03_automation03_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q03_automation03_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page04",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q04_automation04",
+     title: "Monitoring able to distinguish between most critical and recurrent problems & provide solution",
+     description: "Phase:Monitoring, Business Value:Proactive monitoring",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No monitoring in place for identifying critical problems"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Able to define criticality but identified problems are manually worked upon if requested"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: partially identifies critical problem and manually solve them"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: monitoring able to identify critical problems but solving them is manual acitivity"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Monitoring able to distinguish problems and the process of resolving ciritical issues is in place"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Monitoring able to distinguish problems and able to automate the process of resolving ciritical issues"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q04_automation04_comment",
+     visibleIf: "{q04_automation04}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q04_automation04_comment",
+     visibleIf: "{q04_automation04}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q04_automation04}"
+    },
+    {
+     type: "rating",
+     name: "q04_automation04_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q04_automation04_desired_level_comment",
+     title: "Rationale for LEVEL {q04_automation04_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q04_automation04_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page05",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q05_automation05",
+     title: "Which items are under version control?",
+     description: "Phase:Source Control, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No tool used. Local developer machines or servers are used to maintain source code"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: distributed manual management of source code "
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: source code and config. files"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: source code, config files and generated code (by build and/or IDE)"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: source code, config. files, generated code, third party libraries"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: all (including database entries, nci)"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q05_automation05_comment",
+     visibleIf: "{q05_automation05}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q05_automation05_comment",
+     visibleIf: "{q05_automation05}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q05_automation05}"
+    },
+    {
+     type: "rating",
+     name: "q05_automation05_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q05_automation05_desired_level_comment",
+     title: "Rationale for LEVEL {q05_automation05_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q05_automation05_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page06",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q06_automation06",
+     title: "What is your code commit frequency?",
+     description: "Phase:Source Control, Business Value:Better rework Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Code commit frequency is based on changes or releases. No process is defined or followed to commit code to SCM "
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Once per sprint"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Once in a week in a sprint"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Non frequent commits per day. Full nightly builds"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Frequent commits for every workitem"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Commits based and tracked against workitems"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q06_automation06_comment",
+     visibleIf: "{q06_automation06}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q06_automation06_comment",
+     visibleIf: "{q06_automation06}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q06_automation06}"
+    },
+    {
+     type: "rating",
+     name: "q06_automation06_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q06_automation06_desired_level_comment",
+     title: "Rationale for LEVEL {q06_automation06_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q06_automation06_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page07",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q07_automation07",
+     title: "How is branching done?",
+     description: "Phase:Source Control, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Branching is not defined.  All changes are managed by developer workspace in SCM"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: master branch"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: master,develop branch "
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: master and develop branch without any wit linking. Test scripts are in scm"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: master , feature and develop branch for each user story."
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Master, feature and develop branch for each task"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q07_automation07_comment",
+     visibleIf: "{q07_automation07}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q07_automation07_comment",
+     visibleIf: "{q07_automation07}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q07_automation07}"
+    },
+    {
+     type: "rating",
+     name: "q07_automation07_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q07_automation07_desired_level_comment",
+     title: "Rationale for LEVEL {q07_automation07_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q07_automation07_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page08",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q08_automation08",
+     title: "How are your builds triggered?",
+     description: "Phase:Build, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Manual builds with different processes in different machines"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Manual but same processes in different machines"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Mostly manual"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Mostly automated"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Automated"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Automated at the time of check in"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q08_automation08_comment",
+     visibleIf: "{q08_automation08}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q08_automation08_comment",
+     visibleIf: "{q08_automation08}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q08_automation08}"
+    },
+    {
+     type: "rating",
+     name: "q08_automation08_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q08_automation08_desired_level_comment",
+     title: "Rationale for LEVEL {q08_automation08_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q08_automation08_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page09",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q09_automation09",
+     title: "How are your build artifacts managed?",
+     description: "Phase:Build, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Build artifacts are managed in Application servers but not in all builds "
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Build artifacts are managed in Application servers but  in all builds  for some artifacts"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Build artifacts are managed in Application servers but  in all builds  for all artifacts"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Mostly manual"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Mostly automated with few manual intervention"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Fully automated"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q09_automation09_comment",
+     visibleIf: "{q09_automation09}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q09_automation09_comment",
+     visibleIf: "{q09_automation09}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q09_automation09}"
+    },
+    {
+     type: "rating",
+     name: "q09_automation09_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q09_automation09_desired_level_comment",
+     title: "Rationale for LEVEL {q09_automation09_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q09_automation09_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page10",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q10_automation10",
+     title: "What is your common practice for test data management?",
+     description: "Phase:Quality, Business Value:Continuous Security & Code Quality",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Testers have to specifically request and follow up with Developers for Test data. Exhaustive test data is mostly the case"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Testers are provided with Test data as and when needed Manually"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Testers are free to generate Test data as it suits the Testing"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Some manual and some automated test data management processes, not production like"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Partly automated test data management, production like"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Fully automated test data management, always production like "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q10_automation10_comment",
+     visibleIf: "{q10_automation10}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q10_automation10_comment",
+     visibleIf: "{q10_automation10}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q10_automation10}"
+    },
+    {
+     type: "rating",
+     name: "q10_automation10_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q10_automation10_desired_level_comment",
+     title: "Rationale for LEVEL {q10_automation10_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q10_automation10_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page11",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q11_automation11",
+     title: "To what extent are your deployments done manually?",
+     description: "Phase:Deploy, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Completely manual, no policy/procedures Completely manual, with no structured procedures"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Completely manual, no policy/procedures Completely manual, with structured procedures"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Mostly manual, some scripts"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Mostly automated, some manual interventions"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Fully automated "
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: One click automated deployment to all environments"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q11_automation11_comment",
+     visibleIf: "{q11_automation11}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q11_automation11_comment",
+     visibleIf: "{q11_automation11}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q11_automation11}"
+    },
+    {
+     type: "rating",
+     name: "q11_automation11_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q11_automation11_desired_level_comment",
+     title: "Rationale for LEVEL {q11_automation11_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q11_automation11_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page12",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q12_automation12",
+     title: "How do you track and measure the quality of your deployments?",
+     description: "Phase:Deploy, Business Value:Continuous Security & Code Quality",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No measurement"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Metrics are defined but no measurement is done"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Fully manual measurement, ad hoc"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Manual, but structural measurement"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Some automated tests"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Fully automated testing and measurement "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q12_automation12_comment",
+     visibleIf: "{q12_automation12}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q12_automation12_comment",
+     visibleIf: "{q12_automation12}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q12_automation12}"
+    },
+    {
+     type: "rating",
+     name: "q12_automation12_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q12_automation12_desired_level_comment",
+     title: "Rationale for LEVEL {q12_automation12_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q12_automation12_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page13",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q13_automation13",
+     title: "What does your team consider good testing?",
+     description: "Phase:Quality, Business Value:Continuous Security & Code Quality",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Testing against requirements is done but no quality gates are defined for Defects Leaks"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Testing is done before any production update"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Testing that promotes continuous improvement in user satisfaction, quality of service, and performance on business objectives"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Testing that is fast enough and thorough enough to provide feedback in the continuous integration and continuous delivery flow"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Testing that covers most used functionality, data, code paths and configurations, with coverage measured against them"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Testing that validates conformance to requirements and fixes of identified bugs"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q13_automation13_comment",
+     visibleIf: "{q13_automation13}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q13_automation13_comment",
+     visibleIf: "{q13_automation13}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q13_automation13}"
+    },
+    {
+     type: "rating",
+     name: "q13_automation13_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q13_automation13_desired_level_comment",
+     title: "Rationale for LEVEL {q13_automation13_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q13_automation13_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page14",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q14_automation14",
+     title: "When do you test for security?",
+     description: "Phase:Quality, Business Value:Continuous Security & Code Quality",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: When there is a vulnerability in place. Rather reactive fixes or not at all."
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Security Testing is done based on the monthly reports from GIT "
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Before a major release"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Before any production release"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: As part of the pull request and code review flow before code is committed"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Security tests are run In the continuous integration and continuous delivery pipeline"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q14_automation14_comment",
+     visibleIf: "{q14_automation14}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q14_automation14_comment",
+     visibleIf: "{q14_automation14}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q14_automation14}"
+    },
+    {
+     type: "rating",
+     name: "q14_automation14_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q14_automation14_desired_level_comment",
+     title: "Rationale for LEVEL {q14_automation14_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q14_automation14_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page15",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q15_automation15",
+     title: "How well is Testing Automated?",
+     description: "Phase:Quality, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Manual Testing "
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Few Test automation which is not maintained in line to developer changes"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Regression test suite developed with less than 50% coverage. No Performance Testing Automation"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Regression test suite developed with more than 50% coverage. Performance Testing Automation"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Regression test suite developed with more than 50% coverage. Performance Testing Automation . Automation on Non functional testing"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: All test automation in place"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q15_automation15_comment",
+     visibleIf: "{q15_automation15}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q15_automation15_comment",
+     visibleIf: "{q15_automation15}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q15_automation15}"
+    },
+    {
+     type: "rating",
+     name: "q15_automation15_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q15_automation15_desired_level_comment",
+     title: "Rationale for LEVEL {q15_automation15_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q15_automation15_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page16",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q16_automation16",
+     title: "Historical and cross functional reports are available",
+     description: "Phase:Monitoring, Business Value:Proactive monitoring",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No reports are available or produced during lifecycle"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Few reports are available or produced during lifecycle"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: if asked from management then manual reports gets produced"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: only default reports could be established, no customization available"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: real time reports are available but for any new requirement of report lot of time and efforts required"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: custom reports are available and can generate at real time for any set of data"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q16_automation16_comment",
+     visibleIf: "{q16_automation16}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q16_automation16_comment",
+     visibleIf: "{q16_automation16}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q16_automation16}"
+    },
+    {
+     type: "rating",
+     name: "q16_automation16_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q16_automation16_desired_level_comment",
+     title: "Rationale for LEVEL {q16_automation16_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q16_automation16_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page17",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q17_automation17",
+     title: "Fully automated log analysis and mitigations",
+     description: "Phase:Monitoring, Business Value:Proactive monitoring",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: History of Logs are not maintained in application servers"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: No log analysis is done"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: manual log analysis and mitigations are also manual"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: partially automated analysis and mitigations are manual"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Automated analysis is there but mitigations are manual"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Yes, real time logs are maintained and monitored using available analytics. Mitigations are also automatic"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q17_automation17_comment",
+     visibleIf: "{q17_automation17}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q17_automation17_comment",
+     visibleIf: "{q17_automation17}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q17_automation17}"
+    },
+    {
+     type: "rating",
+     name: "q17_automation17_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q17_automation17_desired_level_comment",
+     title: "Rationale for LEVEL {q17_automation17_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q17_automation17_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page18",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q18_automation18",
+     title: "Tool for capturing requirements (backlogs, tasks) and report bugs/issues",
+     description: "Phase:Requirement Gathering, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Process in place for these activities but distributed tools are in use with minimal or no usage"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: different tools are getting used to manage these activities separately and not being used extensively"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Different tools are in place for requirement planning & bugs, no interlink between them but used very extensively"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Unified tool is there only for backlog and requirement management. Bugs are not captured"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Unified tool is there but bugs/issues has to be managed separately in another functionality"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Unified tool is there for managing backlogs, capturing user stories & tracking them. Managing bugs/issues against user stories & tracking"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q18_automation18_comment",
+     visibleIf: "{q18_automation18}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q18_automation18_comment",
+     visibleIf: "{q18_automation18}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q18_automation18}"
+    },
+    {
+     type: "rating",
+     name: "q18_automation18_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q18_automation18_desired_level_comment",
+     title: "Rationale for LEVEL {q18_automation18_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q18_automation18_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page19",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q19_automation19",
+     title: "Are you having organized planning meeting for roadmap & requirement planning?",
+     description: "Phase:Requirement Gathering, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Requirement planning is not captured anywhere"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Requirement planning in place but different teams work in Silos for their planning"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: different tools are in place for requirement planning. Different teams collaborate but not able to lay future plan with current structure in place"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Requirement planning is captured in single tool like excel & word but managing for different teams for laying future planning based on that is difficult task"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Requirement planning is captured in unified tool, teams are collaborating but their frequency is random hence creating difficulty in laying roadmap for the future"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Requirement Planning captured in unified tool with progress being tracked. Different teams collaborate during Iteration planning & PI planning and lays future roadmap"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q19_automation19_comment",
+     visibleIf: "{q19_automation19}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q19_automation19_comment",
+     visibleIf: "{q19_automation19}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q19_automation19}"
+    },
+    {
+     type: "rating",
+     name: "q19_automation19_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q19_automation19_desired_level_comment",
+     title: "Rationale for LEVEL {q19_automation19_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q19_automation19_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page20",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q20_automation20",
+     title: "Requirements are tracked to production release?",
+     description: "Phase:Requirement Gathering, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Requirements are just recorded but no traceability exists"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Requirements are captured in different tools hence difficult to trace changes till production release"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Requirements are captured in different tools and production tracking is with different tool"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Requirements are getting tracked in one tool but no technical mapping of requirements with deployment pipeline available"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Requirements are captured in unified tool but traceability is limited only till Test case execution available while deploying to production is not connected with requirement tracking"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Requirements are captured in unified tool which helps in capturing requirement IDs while executing deployment through pipelines, capturing test case execution & results, hence ensuring end to end traceability."
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q20_automation20_comment",
+     visibleIf: "{q20_automation20}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q20_automation20_comment",
+     visibleIf: "{q20_automation20}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q20_automation20}"
+    },
+    {
+     type: "rating",
+     name: "q20_automation20_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q20_automation20_desired_level_comment",
+     title: "Rationale for LEVEL {q20_automation20_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q20_automation20_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page21",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q21_automation21",
+     title: "Unit Testing is a part of Development Lifecycle",
+     description: "Phase:Unit Testing, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Unit Testing is not practised"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Unit Test cases are present but not maintained. "
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Unit Test cases are present and maintained with Code Coverage less than 25%"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Unit Test cases are present and maintained with Code Coverage between than 25-50%"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Unit Test cases are present and maintained with Code Coverage between than 50-75%"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Unit Test cases are present and maintained with Code Coverage greater than 75%"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q21_automation21_comment",
+     visibleIf: "{q21_automation21}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q21_automation21_comment",
+     visibleIf: "{q21_automation21}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q21_automation21}"
+    },
+    {
+     type: "rating",
+     name: "q21_automation21_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q21_automation21_desired_level_comment",
+     title: "Rationale for LEVEL {q21_automation21_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q21_automation21_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page22",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q22_automation22",
+     title: "How does your project team design solutions?",
+     description: "Phase:Design, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Architecture Design is worked upon in silo. UI UX no design is presented to Business wrt requirements. Each project in separation with no sharing / re-use of common building blocks"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Some projects sharing and re-using common building blocks. UI UX design is presented to Business wrt requirements"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Many projects sharing and re-using common building blocks with some projects developing new building blocks to be used by other projects at a later stage. UI UX Prototype is shared to Business at the Design Stage itself"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Most projects are sharing and re-using common building blocks with most projects + developing new building blocks to be used by other projects at a later stage"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: All projects and programs are actively sharing and re-using common building blocks with all projects developing new building blocks to be used by other projects and programs at a later stage"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: All designs are accessible to application team and to Business"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q22_automation22_comment",
+     visibleIf: "{q22_automation22}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q22_automation22_comment",
+     visibleIf: "{q22_automation22}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q22_automation22}"
+    },
+    {
+     type: "rating",
+     name: "q22_automation22_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q22_automation22_desired_level_comment",
+     title: "Rationale for LEVEL {q22_automation22_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q22_automation22_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page23",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q23_automation23",
+     title: "How does your team (or your organisation, if you deal with multiple teams) include architecture in your products and way of working?",
+     description: "Phase:Design, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: There is no architecture known, no principles set or rules defined"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Architecture mostly comprises a set of rules to be used across all teams, which are defined in architectural documentation. There is no active assurance of these architectural rules in the teams"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Architectural principles have been set, but are not updated or evolving frequently. Teams mostly apply the principles, but there is no direct feedback mechanism between the architects and the teams"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: An intentional architecture is set, which is fully aimed at enabling principle-based sharing of tools, technology and practices. The emerging architecture is added to this architectural runway manually. There is alignment between the dev and ops architecture, yet there may be some differences"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: An intentional architecture is set, which is fully aimed at enabling principle-based sharing of tools, technology and practices.  There is no difference between dev &amp; ops architectures."
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: An intentional architecture is set, which is fully aimed at enabling principle-based sharing of tools, technology and practices. The emerging architecture is added to this architectural runway in a mostly automated fashion. There is no difference between dev ; ops architectures."
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q23_automation23_comment",
+     visibleIf: "{q23_automation23}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q23_automation23_comment",
+     visibleIf: "{q23_automation23}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q23_automation23}"
+    },
+    {
+     type: "rating",
+     name: "q23_automation23_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q23_automation23_desired_level_comment",
+     title: "Rationale for LEVEL {q23_automation23_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q23_automation23_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page24",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q24_automation24",
+     title: "How is Virtualization configured?",
+     description: "Phase:Virtualization, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No focus on Virtualization"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: The focus is on the Individual where there are one-off attempts to bridge gaps obstructing an individual’s ability to complete a specific development or test task"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: The focus is on the project where Service Virtualization is used emulate dependent system components and allows the project’s development or testing tasks to ”shift left.”"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: The focus is on the test environment where service virtualization provides consistent access to development and test environments that involve difficult-to-access, inconsistent, or unreliable system dependencies"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: The focus is on creating test scenarios where multiple test environments (e.g., for performance, security, error conditions,) are coordinated to rapidly exercise different scenarios at each SDLC stage—achieving more automation and better test outcomes"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: One click deployments to spin up application, environments , data and configurations"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q24_automation24_comment",
+     visibleIf: "{q24_automation24}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q24_automation24_comment",
+     visibleIf: "{q24_automation24}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q24_automation24}"
+    },
+    {
+     type: "rating",
+     name: "q24_automation24_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q24_automation24_desired_level_comment",
+     title: "Rationale for LEVEL {q24_automation24_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q24_automation24_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page25",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q25_automation25",
+     title: "How is Configuration Management done?",
+     description: "Phase:Configuration Management, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No Configuration management process setup wrt Application and Infrastructure"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: System configurations in place for Managed systems which can include servers, storage, networking, and software  with description of the desired state of systems documented and maintained well"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Consistent management of  softwares and systems using some automation with an automation software"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Consistent management of softwares and systems using full automation with an automation software with focus on Infrastructure as a Code"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Configurations as a code which  enables the ability to scale infrastructure and software systems without having to correspondingly scale administrative staff to manage those systems"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Maintain and manage Configurations drift  automatically or via self learning algorithms"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q25_automation25_comment",
+     visibleIf: "{q25_automation25}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q25_automation25_comment",
+     visibleIf: "{q25_automation25}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q25_automation25}"
+    },
+    {
+     type: "rating",
+     name: "q25_automation25_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q25_automation25_desired_level_comment",
+     title: "Rationale for LEVEL {q25_automation25_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q25_automation25_desired_level}"
+    }
+   ],
+   title: "Automation",
+   description: "How automated is the application with respect to Requirement Gathering & Design, SCM, Build & Deploy, Quality & Unit Testing, Provisioning & Virtualization, Configuration Management & Integration and Monitoring"
+  },
+  {
+   name: "page26",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q26_culture01",
+     title: "To what extent is sharing of knowledge and capabilities in the team(s) facilitated by tooling?",
+     description: "Phase:Collaboration , Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No active sharing in the team"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Knowledge sharing is on demand basis"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: A joint knowledge platform, but not actively used"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Joint knowledge platform is being used"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: X-functional teams, who actively share roles, responsibilities, activities and knowledge"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Everyone can be replaced by everyone in the team, at least sufficiently for short term continuity "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q26_culture01_comment",
+     visibleIf: "{q26_culture01}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q26_culture01_comment",
+     visibleIf: "{q26_culture01}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q26_culture01}"
+    },
+    {
+     type: "rating",
+     name: "q26_culture01_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q26_culture01_desired_level_comment",
+     title: "Rationale for LEVEL {q26_culture01_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q26_culture01_desired_level}"
+    }
+   ],
+   title: "Culture",
+   description: "How is the team's culture of collaboration? How does the team traces the application lifecycle and workflow?"
+  },
+  {
+   name: "page27",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q27_culture02",
+     title: "What level of transparency, by use of tooling, do your team(s) expose with regard to their work in progress (WIP)?",
+     description: "Phase:Workflow, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No visualisation nor registration of WIP"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Registration of WIP in tool, no visual boards"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Some activities are visualised on a shared board"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Visual boards are available with WIP but no limit is set"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Visual boards are actively used for visualising WIP, not managed by WIP limits"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Visual boards are actively used for visualising and taking account of WIP limits "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q27_culture02_comment",
+     visibleIf: "{q27_culture02}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q27_culture02_comment",
+     visibleIf: "{q27_culture02}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q27_culture02}"
+    },
+    {
+     type: "rating",
+     name: "q27_culture02_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q27_culture02_desired_level_comment",
+     title: "Rationale for LEVEL {q27_culture02_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q27_culture02_desired_level}"
+    }
+   ],
+   title: "Culture",
+   description: "How is the team's culture of collaboration? How does the team traces the application lifecycle and workflow?"
+  },
+  {
+   name: "page28",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q28_culture03",
+     title: "Teams involved (Dev, Testing, Support, Operations) are multidisciplinary and works in a collaborative environment to deliver end-to-end values ",
+     description: "Phase:Collaboration , Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No collboration amongst different teams"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: No collaboration between teams and managed as individual driven"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Teams are separate and collaborate only on need basis"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Managed more as individual driven but collaborate only for certain tasks"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Team collaborate after timelines are defined and work allocation is planned"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: All team involved in Project/CR collaborate at the initial stage and define clear set of activities with tentative timelines and dependencies"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q28_culture03_comment",
+     visibleIf: "{q28_culture03}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q28_culture03_comment",
+     visibleIf: "{q28_culture03}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q28_culture03}"
+    },
+    {
+     type: "rating",
+     name: "q28_culture03_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q28_culture03_desired_level_comment",
+     title: "Rationale for LEVEL {q28_culture03_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q28_culture03_desired_level}"
+    }
+   ],
+   title: "Culture",
+   description: "How is the team's culture of collaboration? How does the team traces the application lifecycle and workflow?"
+  },
+  {
+   name: "page29",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q29_lean01",
+     title: "To what extent does your product or service delivery methodology support continuous delivery?",
+     description: "Phase:Continual improvement, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No clear standards and delivery processes used. Going live is always a serious struggle, adhoc driven, with many incidents occurring after go-live and dissatisfying handover processes and results."
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Release management is  leading to long test and wait times (approvals).  Large batches are used (releases)"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Release management  approval time is minimal and minimal batches for release "
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Agile methodologies are being used, but these involve the operations and support of the value chain. Going live is done after the actual (development) Iteration."
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Iterations are being used as release containers, so within each Iteration the product increments will be brought live. Usually at the end of the Iteration, after the demo"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: A one piece continuous flow is in place, so every work item (story) is picked up by the team, and is put on production instantly and demo provided to relevant stakeholders.  "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q29_lean01_comment",
+     visibleIf: "{q29_lean01}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q29_lean01_comment",
+     visibleIf: "{q29_lean01}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q29_lean01}"
+    },
+    {
+     type: "rating",
+     name: "q29_lean01_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q29_lean01_desired_level_comment",
+     title: "Rationale for LEVEL {q29_lean01_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q29_lean01_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page30",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q30_lean02",
+     title: "To what extent is your team (or organization if you are involved with multiple teams) focused on reducing the waste?",
+     description: "Phase:System Thinking, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: There is no focus on reducing waste"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Only specialists are focusing on reducing waste"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: All team members are aware about the waste but taking an initiative to reduce it is lagging"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Team members know how to recognize and eliminate waste, but it is not structurally performed"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: On a periodic (but not very frequent, maybe Monthly) basis, team members actively search for waste reduction opportunities and are mandated to take these away"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Reducing waste is second nature of everyone involved in and around the teams, frequent value stream mapping sessions are being performed. There are some automated processes to identify and handle waste "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q30_lean02_comment",
+     visibleIf: "{q30_lean02}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q30_lean02_comment",
+     visibleIf: "{q30_lean02}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q30_lean02}"
+    },
+    {
+     type: "rating",
+     name: "q30_lean02_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q30_lean02_desired_level_comment",
+     title: "Rationale for LEVEL {q30_lean02_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q30_lean02_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page31",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q31_lean03",
+     title: "To what extent are the value streams identified within your team or delivery chain?",
+     description: "Phase:System Thinking, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: There are no value streams known"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: One or more value streams are known and described in documents, but have no relation to the actual work & decision making (priorities)"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Certain value streams are identified and defined but unable to measure"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: The value streams are visible and known to everyone involved, but are not actively being used in decision making (priorities). Measurement is done ."
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: The value streams are visible and evolve continuously, the teams are aware of their contribution to these value streams. Decision making on value stream level is not always directly aligned with team level decisions"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: The value streams are visible and evolve continuously, the teams are very aware of their contribution to these value streams, and decisions on team levels are aligned real-time with overall value stream decisions and priorities "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q31_lean03_comment",
+     visibleIf: "{q31_lean03}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q31_lean03_comment",
+     visibleIf: "{q31_lean03}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q31_lean03}"
+    },
+    {
+     type: "rating",
+     name: "q31_lean03_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q31_lean03_desired_level_comment",
+     title: "Rationale for LEVEL {q31_lean03_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q31_lean03_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page32",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q32_lean04",
+     title: "How does your team or your delivery chain deal with bottlenecks (constraints)?",
+     description: "Phase:System Thinking, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Bottlenecks are not identified"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Bottlenecks are identified, but resolving them takes too much time, causing a negative impact"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Bottlenecks are identified but since there is no visualization in place, identifying & deriving itself takes too much of a time"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Because we visualize most of our work, bottlenecks are identified in some cases and eliminated, mostly driven by the Scrum Master. This process is not shared between dev and ops"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Because we visualize all of our work, bottlenecks become visible instantly and are identified and eliminated effectively by the Scrum Master. Focus is mostly on dev or ops, not a joint effort"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Because we visualize all of our work, bottlenecks become visible instantly and are identified and eliminated effectively by the team as a whole, including dev, ops and all other stakeholders "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q32_lean04_comment",
+     visibleIf: "{q32_lean04}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q32_lean04_comment",
+     visibleIf: "{q32_lean04}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q32_lean04}"
+    },
+    {
+     type: "rating",
+     name: "q32_lean04_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q32_lean04_desired_level_comment",
+     title: "Rationale for LEVEL {q32_lean04_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q32_lean04_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page33",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q33_lean05",
+     title: "Who are responsible for improvements within the organization?",
+     description: "Phase:Continual improvement, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No one is responsible for improvements"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Line or process managers are responsible for improvements"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Team members are responsible for improvements, managers are responsible for decisions"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Team members are responsible for improvements, and to some extent responsible for decisions"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Team members are responsible for improvements and make decisions within their scope, managers are coaching/facilitating"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Continual improvements are part of the day-to-day operation, decisions are made by those who know best. "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q33_lean05_comment",
+     visibleIf: "{q33_lean05}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q33_lean05_comment",
+     visibleIf: "{q33_lean05}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q33_lean05}"
+    },
+    {
+     type: "rating",
+     name: "q33_lean05_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q33_lean05_desired_level_comment",
+     title: "Rationale for LEVEL {q33_lean05_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q33_lean05_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page34",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q34_lean06",
+     title: "To what extent does your team use direct feedback loops?",
+     description: "Phase:Continual improvement, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No daily stand-ups, no knowledge is collected of release results, no demos are provided."
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Feedback loops do not cross functional roles. Developers do not deliver feedback to operations or vice versa. "
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Feedback loops do not cross functional roles. Developers do not deliver feedback to operations or vice versa. Some procedures are in place to force feedback, but they are not part of daily practice or behaviour"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Most teams are using daily stand-ups. In some teams, operators join the development team stand-ups, and occasionally join their demos. Business owners and key users are infrequently informed by the PO."
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Daily stand-ups are used on all levels, including management and other stakeholders. The business is not very much aligned yet, they have other feedback mechanisms, because they do not have much time available for IT stuff"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: People continuously provide feedback, systems provide automated feedback as well. Feedback crosses all team and organizational barriers, including the business, suppliers, and supporting roles.  "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q34_lean06_comment",
+     visibleIf: "{q34_lean06}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q34_lean06_comment",
+     visibleIf: "{q34_lean06}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q34_lean06}"
+    },
+    {
+     type: "rating",
+     name: "q34_lean06_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q34_lean06_desired_level_comment",
+     title: "Rationale for LEVEL {q34_lean06_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q34_lean06_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page35",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q35_lean07",
+     title: "Team members have clear roles, plans and goals",
+     description: "Phase:Culture, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Not required to be apply during execution of project/CR"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: No transperancy from higher management to lower. Individuals are not clear with their roles and plans"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: team members not required to be clear on these parameters they could work at task level"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Goals are defined only during annual event and roles specific to projects are not there. Roles are defined but not sure about plans for executing CR/Project"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: team members are aware about their goals but their roles and plans are not clearly defined in a project/CR"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: All team members are aware clearly about their roles & responsibilities, action plans and targetted goals"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q35_lean07_comment",
+     visibleIf: "{q35_lean07}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q35_lean07_comment",
+     visibleIf: "{q35_lean07}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q35_lean07}"
+    },
+    {
+     type: "rating",
+     name: "q35_lean07_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q35_lean07_desired_level_comment",
+     title: "Rationale for LEVEL {q35_lean07_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q35_lean07_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page36",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q36_lean08",
+     title: "Management provide a vision, but leave decision making to teams ",
+     description: "Phase:Culture, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Decisions are taken at business level and same gets communicated internally"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Decision making only happens at the high level and individual specific"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: management provides decision and to some extend teams could participate"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: visions are pre-defined and with nature of CR/project team could discuss on it"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: discussion happen between team and consultation with management then follows"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: management provides direction and leaves decision making with team"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q36_lean08_comment",
+     visibleIf: "{q36_lean08}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q36_lean08_comment",
+     visibleIf: "{q36_lean08}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q36_lean08}"
+    },
+    {
+     type: "rating",
+     name: "q36_lean08_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q36_lean08_desired_level_comment",
+     title: "Rationale for LEVEL {q36_lean08_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q36_lean08_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page37",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q37_lean09",
+     title: "Daily standup meeting is happening",
+     description: "Phase:Culture, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No meeting for discussing actionables or issues in place, individuals connect randomly"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Project meetings takes place but not at fixed interval"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: scrum calls are there but not on daily basis"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Daily meetings are there but time interval is not fixed & teams to be involved varies"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: daily scrum meeting of 15mins but no specific role of scrum master and stand process follows"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: daily scrum meeting with 15mins duration and lead by scrum master"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q37_lean09_comment",
+     visibleIf: "{q37_lean09}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q37_lean09_comment",
+     visibleIf: "{q37_lean09}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q37_lean09}"
+    },
+    {
+     type: "rating",
+     name: "q37_lean09_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q37_lean09_desired_level_comment",
+     title: "Rationale for LEVEL {q37_lean09_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q37_lean09_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page38",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q38_lean10",
+     title: "Iteration planning with time boxed Iteration in place",
+     description: "Phase:Culture, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No Iteration planning in place"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Iteration planning is there but not time boxed and not created at regular intervals"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: kanban/sdlc is followed"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Iteration planning is there but all teams involved are not part of Iteration activities"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Iteration planning is there with time boxed intervals and all teams participates"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Iteration planning is there with time boxed intervals and all teams participates. Future backlogs & Iteration planning also gets recorded in the unified tool"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q38_lean10_comment",
+     visibleIf: "{q38_lean10}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q38_lean10_comment",
+     visibleIf: "{q38_lean10}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q38_lean10}"
+    },
+    {
+     type: "rating",
+     name: "q38_lean10_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q38_lean10_desired_level_comment",
+     title: "Rationale for LEVEL {q38_lean10_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q38_lean10_desired_level}"
+    }
+   ],
+   title: "Lean",
+   description: "How well are the teams' culture and behaviour oriented towards the lean principles?"
+  },
+  {
+   name: "page39",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q39_measurement01",
+     title: "What is the Time taken from requirements to release?",
+     description: "Phase:DevOps maturity indicators, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Not known"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: >=Quarterly"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: more than 1 month"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: 2-4 Weeks"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: 1-2 Weeks"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: On-Demand"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q39_measurement01_comment",
+     visibleIf: "{q39_measurement01}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q39_measurement01_comment",
+     visibleIf: "{q39_measurement01}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q39_measurement01}"
+    },
+    {
+     type: "rating",
+     name: "q39_measurement01_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q39_measurement01_desired_level_comment",
+     title: "Rationale for LEVEL {q39_measurement01_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q39_measurement01_desired_level}"
+    }
+   ],
+   title: "Measurement",
+   description: "How does the team measures the maturity indicators (measurements)?"
+  },
+  {
+   name: "page40",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q40_measurement02",
+     title: "What is the success rate of deployments for changes?",
+     description: "Phase:DevOps maturity indicators, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Not measured currently, No analytics available"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: 10-20%"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: 20-50%"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: 50-60%"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: 60-80%"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: 90-100%"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q40_measurement02_comment",
+     visibleIf: "{q40_measurement02}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q40_measurement02_comment",
+     visibleIf: "{q40_measurement02}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q40_measurement02}"
+    },
+    {
+     type: "rating",
+     name: "q40_measurement02_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q40_measurement02_desired_level_comment",
+     title: "Rationale for LEVEL {q40_measurement02_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q40_measurement02_desired_level}"
+    }
+   ],
+   title: "Measurement",
+   description: "How does the team measures the maturity indicators (measurements)?"
+  },
+  {
+   name: "page41",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q41_measurement03",
+     title: "What is the average Time taken from commit to deploy until pre-prod considering no uat automation in pipeline?",
+     description: "Phase:DevOps maturity indicators, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Manual and varies"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: >3hours"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: 2- 3 hour"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: 1-2 hour"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: 30 mins-1 hr"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: <30 mins and improving"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q41_measurement03_comment",
+     visibleIf: "{q41_measurement03}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q41_measurement03_comment",
+     visibleIf: "{q41_measurement03}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q41_measurement03}"
+    },
+    {
+     type: "rating",
+     name: "q41_measurement03_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q41_measurement03_desired_level_comment",
+     title: "Rationale for LEVEL {q41_measurement03_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q41_measurement03_desired_level}"
+    }
+   ],
+   title: "Measurement",
+   description: "How does the team measures the maturity indicators (measurements)?"
+  },
+  {
+   name: "page42",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q42_measurement04",
+     title: "What is the Time taken to recover from a failure in deployment?",
+     description: "Phase:DevOps maturity indicators, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Manual and varies"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: >3hours"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: 2- 3 hour"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: 1-2 hour"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: 30 mins-1 hr"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: <30 mins and improving"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q42_measurement04_comment",
+     visibleIf: "{q42_measurement04}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q42_measurement04_comment",
+     visibleIf: "{q42_measurement04}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q42_measurement04}"
+    },
+    {
+     type: "rating",
+     name: "q42_measurement04_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q42_measurement04_desired_level_comment",
+     title: "Rationale for LEVEL {q42_measurement04_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q42_measurement04_desired_level}"
+    }
+   ],
+   title: "Measurement",
+   description: "How does the team measures the maturity indicators (measurements)?"
+  },
+  {
+   name: "page43",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q43_measurement05",
+     title: "What is the Lifecycle Traceability achieved",
+     description: "Phase:DevOps maturity indicators, Business Value:Lifecycle Traceability",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No traceability as no tool used for anything"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Requirements, Code, Test, Deployments and Release in silos"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Requirements and Code achieved. "
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Requirements , Code and Testing tracing achieved"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Requirements, Code, Testing and Deployments to all environments tracing achieved"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: End to end lifecycle traceability acheived with one click all relevant data is available."
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q43_measurement05_comment",
+     visibleIf: "{q43_measurement05}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q43_measurement05_comment",
+     visibleIf: "{q43_measurement05}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q43_measurement05}"
+    },
+    {
+     type: "rating",
+     name: "q43_measurement05_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q43_measurement05_desired_level_comment",
+     title: "Rationale for LEVEL {q43_measurement05_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q43_measurement05_desired_level}"
+    }
+   ],
+   title: "Measurement",
+   description: "How does the team measures the maturity indicators (measurements)?"
+  },
+  {
+   name: "page44",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q44_recovery01",
+     title: "Automated with a defined frequency for application, db and servers",
+     description: "Phase:Scalability, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No backup"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Manual but a defined frequency is there for only app, db or server"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Manual but a defined frequency is there for all app, db or server"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Automated with a defined frequency"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Automated backup "
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Automated backup, purging "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q44_recovery01_comment",
+     visibleIf: "{q44_recovery01}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q44_recovery01_comment",
+     visibleIf: "{q44_recovery01}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q44_recovery01}"
+    },
+    {
+     type: "rating",
+     name: "q44_recovery01_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q44_recovery01_desired_level_comment",
+     title: "Rationale for LEVEL {q44_recovery01_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q44_recovery01_desired_level}"
+    }
+   ],
+   title: "Recovery",
+   description: "How well the teams are oriented towards the rollback and recovery from failures?"
+  },
+  {
+   name: "page45",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q45_recovery02",
+     title: "How does your organisation deal with shared infrastructure and its relation to the teams activities?",
+     description: "Phase:Scalability, Business Value:Accelerates Deployment",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: There is no clear responsibility who does what regarding infrastructure          "
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: All infrastructure is managed centrally, and most of it is on-premises, the teams have no say in this nor knowledge about the details          "
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: All infrastructure is managed centrally, and most of it is on-premises, the teams have a  say in this and have knowledge about the details          "
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: There is an internal infrastructure team, responsible for the generic infrastructure, which is partly cloud-based. They enable and support the teams in their infrastructure demand."
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: There is an internal infrastructure team, responsible for the generic infrastructure, which is partly cloud-based. They facilitate, support and train the teams to optimize them for self-service.          "
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: The generic infrastructure is serviced completely in the cloud and can be adapted on demand by the teams. All teams are using self-service for all their infrastructural needs.   "
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q45_recovery02_comment",
+     visibleIf: "{q45_recovery02}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q45_recovery02_comment",
+     visibleIf: "{q45_recovery02}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q45_recovery02}"
+    },
+    {
+     type: "rating",
+     name: "q45_recovery02_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q45_recovery02_desired_level_comment",
+     title: "Rationale for LEVEL {q45_recovery02_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q45_recovery02_desired_level}"
+    }
+   ],
+   title: "Recovery",
+   description: "How well the teams are oriented towards the rollback and recovery from failures?"
+  },
+  {
+   name: "page46",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q46_recovery03",
+     title: "Stop the line mentality",
+     description: "Phase:Enable low risk releases, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: Escalations are considered not important"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Action is taken on escalations"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Action is taken only when someone intervenes"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Designated people swarms to fix any issue until its resolved"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: With a ‘stop-the-line’ mentality, everyone swarms to fix any problem until it’s resolved"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Findings are then turned into improvements which are integrated into the process or product to prevent repeat problems in the future"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q46_recovery03_comment",
+     visibleIf: "{q46_recovery03}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q46_recovery03_comment",
+     visibleIf: "{q46_recovery03}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q46_recovery03}"
+    },
+    {
+     type: "rating",
+     name: "q46_recovery03_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q46_recovery03_desired_level_comment",
+     title: "Rationale for LEVEL {q46_recovery03_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q46_recovery03_desired_level}"
+    }
+   ],
+   title: "Recovery",
+   description: "How well the teams are oriented towards the rollback and recovery from failures?"
+  },
+  {
+   name: "page47",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q47_recovery04",
+     title: "Plan for and rehearse failures",
+     description: "Phase:Enable low risk releases, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No Rehearsals "
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: One time rehearsal done and not repeated/ Yearly releases"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Rehearsals done on server upgrades only"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Rehearsals done only during major changes"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Rehearsals planned on a definite  frequency"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: On-demand rehearse"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q47_recovery04_comment",
+     visibleIf: "{q47_recovery04}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q47_recovery04_comment",
+     visibleIf: "{q47_recovery04}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q47_recovery04}"
+    },
+    {
+     type: "rating",
+     name: "q47_recovery04_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q47_recovery04_desired_level_comment",
+     title: "Rationale for LEVEL {q47_recovery04_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q47_recovery04_desired_level}"
+    }
+   ],
+   title: "Recovery",
+   description: "How well the teams are oriented towards the rollback and recovery from failures?"
+  },
+  {
+   name: "page48",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "q48_recovery05",
+     title: "Build the environment and capability to fix forward or roll back for data",
+     description: "Phase:Enable low risk releases, Business Value:Decrease in Change Failure Rate",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "Level-0 Pre-Basic: No process defined. Taken as an adhoc / ambiguous activity when need arises"
+      },
+      {
+       value: 1,
+       text: "Level-1 Basic: Manual rollback"
+      },
+      {
+       value: 2,
+       text: "Level-2 Emerging: Automated rollback with manual revert of user transactions"
+      },
+      {
+       value: 3,
+       text: "Level-3 Co-ordinated: Automated rollback with automated revert of user transactions with little impact on application"
+      },
+      {
+       value: 4,
+       text: "Level-4 Enhanced: Automated rollback with automated revert of user transactions with no impact on application"
+      },
+      {
+       value: 5,
+       text: "Level-5 Top Level: Since mistakes will be made, and servers will fail, teams need to develop the capability to quickly ‘fix forward’ and, where necessary, roll back to a prior known good state. In the latter case, planning and investment must be made to revert any data changes back to the prior state, and not lose any user transactions that occurred during the process."
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "q48_recovery05_comment",
+     visibleIf: "{q48_recovery05}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q48_recovery05_comment",
+     visibleIf: "{q48_recovery05}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {q48_recovery05}"
+    },
+    {
+     type: "rating",
+     name: "q48_recovery05_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "q48_recovery05_desired_level_comment",
+     title: "Rationale for LEVEL {q48_recovery05_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {q48_recovery05_desired_level}"
+    }
+   ],
+   title: "Recovery",
+   description: "How well the teams are oriented towards the rollback and recovery from failures?"
+  }
+ ],
+ showPageNumbers: true,
+ showQuestionNumbers: "off",
+ showProgressBar: "top"
+}

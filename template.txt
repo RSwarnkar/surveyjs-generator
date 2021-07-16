@@ -1,0 +1,72 @@
+{
+   name: "{__PAGE_NUMBER__}",
+   elements: [
+    {
+     type: "radiogroup",
+     name: "{__QUESTION_NUMBER__}_{__DIMENSION_QID__}",
+     title: "{__QUESTION_STATEMENT__}",
+     description: "{__QUESTION_DESCRIPTION__}",
+     isRequired: true,
+     choices: [
+      {
+       value: 0,
+       text: "{__LEVEL0__}"
+      },
+      {
+       value: 1,
+       text: "{__LEVEL1__}"
+      },
+      {
+       value: 2,
+       text: "{__LEVEL2__}"
+      },
+      {
+       value: 3,
+       text: "{__LEVEL3__}"
+      },
+      {
+       value: 4,
+       text: "{__LEVEL4__}"
+      },
+      {
+       value: 5,
+       text: "{__LEVEL5__}"
+      },
+      {
+       value: -1,
+       text: "Not Applicable"
+      }
+     ]
+    },
+    {
+     type: "comment",
+     name: "{__QUESTION_NUMBER__}_{__DIMENSION_QID__}_comment",
+     visibleIf: "{{__QUESTION_NUMBER__}_{__DIMENSION_QID__}}==-1",
+     title: "Comments",
+     description: "You selected 'Not Applicable', Please explain in few words why?",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "{__QUESTION_NUMBER__}_{__DIMENSION_QID__}_comment",
+     visibleIf: "{{__QUESTION_NUMBER__}_{__DIMENSION_QID__}}!=-1",
+     title: "Comments",
+     description: "Please explain in few words why?:  {{__QUESTION_NUMBER__}_{__DIMENSION_QID__}}"
+    },
+    {
+     type: "rating",
+     name: "{__QUESTION_NUMBER__}_{__DIMENSION_QID__}_desired_level",
+     title: "DESIRED LEVEL",
+     description: "1=Basic, 2=Emerging, 3=Co-ordinated, 4=Enhanced, 5=Top Level",
+     isRequired: true
+    },
+    {
+     type: "comment",
+     name: "{__QUESTION_NUMBER__}_{__DIMENSION_QID__}_desired_level_comment",
+     title: "Rationale for LEVEL {{__QUESTION_NUMBER__}_{__DIMENSION_QID__}_desired_level}",
+     description: "Please add brief comment about the rationale for selecting DESIRED LEVEL {{__QUESTION_NUMBER__}_{__DIMENSION_QID__}_desired_level}"
+    }
+   ],
+   title: "{__PAGE_TITLE__}",
+   description: "{__PAGE_DESC__}"
+  }
